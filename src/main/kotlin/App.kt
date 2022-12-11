@@ -1,5 +1,6 @@
 import mobilenotificaion.printNotificationSummary
 import movieticket.calcTicketPrice
+import songcatalog.Song
 import temparatureconverter.printFinalTemperature
 
 fun main() {
@@ -49,5 +50,15 @@ fun main() {
         5.0/9.0 * (it-32.0) + 273.15
     }
 
+    println()
+
+    val single = Song(
+        title = "Home",
+        artist = "Micheal Buble",
+        releasedYear = "2009",
+        playcount = 143000000
+    )
+
+    single.printSongInfo()
 }
 
