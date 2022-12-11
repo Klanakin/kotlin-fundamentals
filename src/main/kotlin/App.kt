@@ -2,6 +2,7 @@ import mobilenotificaion.printNotificationSummary
 import movieticket.calcTicketPrice
 import songcatalog.Song
 import temparatureconverter.printFinalTemperature
+import userprofile.Person
 
 fun main() {
 
@@ -58,7 +59,15 @@ fun main() {
         releasedYear = "2009",
         playcount = 143000000
     )
-
     single.printSongInfo()
+
+    println()
+
+    val amanda = Person("Amanda", 33, "play tennis", null)
+    val atiqah = Person("Atiqah", 28, "climb", amanda)
+
+    amanda.showProfile()
+    println()
+    atiqah.showProfile()
 }
 
