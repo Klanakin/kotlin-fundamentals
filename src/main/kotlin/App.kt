@@ -1,3 +1,5 @@
+import auction.Bid
+import auction.auctionPrice
 import mobilenotificaion.printNotificationSummary
 import movieticket.calcTicketPrice
 import screenregulator.FoldablePhone
@@ -73,13 +75,20 @@ fun main() {
 //    atiqah.showProfile()
 //
 //    println()
+//
+//    val regularPhone: Phone = Phone(isScreenLightOn = false)
+//    regularPhone.switchOn()
+//    regularPhone.checkPhoneScreenLight()
+//
+//    val foldablePhonePhone: Phone = FoldablePhone(isScreenLightOn = true)
+//    foldablePhonePhone.switchOn()
+//    foldablePhonePhone.checkPhoneScreenLight()
+//
+//    println()
 
-    val regularPhone: Phone = Phone(isScreenLightOn = false)
-    regularPhone.switchOn()
-    regularPhone.checkPhoneScreenLight()
+    val winningBid = Bid(5000, "Private Collector")
 
-    val foldablePhonePhone: Phone = FoldablePhone(isScreenLightOn = true)
-    foldablePhonePhone.switchOn()
-    foldablePhonePhone.checkPhoneScreenLight()
+    println("Item A is sold at ${auctionPrice(winningBid, 2000)}.")
+    println("Item B is sold at ${auctionPrice(null, 3000)}.")
 }
 
